@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mia Perlina — украшения ручной работы</title>
+<meta name="description" content="Mia Perlina — авторские украшения ручной работы из жемчуга и натуральных камней.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="tick-wrap">
+    <span class="tick-item">Доставка по всей России</span>
+    <span class="tick-item">•</span>
+    <span class="tick-item">Украшения ручной работы</span>
+    <span class="tick-item">•</span>
+    <span class="tick-item">Жемчуг и натуральные камни</span>
+    <span class="tick-item">•</span>
+    <span class="tick-item">Доставка по всей России</span>
+    <span class="tick-item">•</span>
+    <span class="tick-item">Украшения ручной работы</span>
+    <span class="tick-item">•</span>
+    <span class="tick-item">Жемчуг и натуральные камни</span>
+    <span class="tick-item">•</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="hdr">
+    <div class="logo-wrap">
+      <svg width="42" height="42" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="20.5" stroke="#4a6480" stroke-width="1"/>
+        <path d="M10 32 L10 14 L22 28 L34 14 L34 32" stroke="#1a2a3a" stroke-width="1.5" fill="none"/>
+        <line x1="28" y1="14" x2="28" y2="30" stroke="#1a2a3a" stroke-width="1.5"/>
+        <circle cx="28" cy="31" r="2.5" fill="#4a6480"/>
+        <path d="M8 10 Q22 6 36 10" stroke="#4a6480" stroke-width="0.8" fill="none"/>
+      </svg>
+      <div>
+        <div class="logo-txt">Mia Perlina</div>
+        <div class="logo-sub">украшения ручной работы</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" class="on">Каталог</a>
+      <a href="catalog.html">Коллекции</a>
+      <a href="about.html">О бренде</a>
+      <a href="#">Программа лояльности</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <div class="hdr-icons">
+      <div class="ico">
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </div>
+      <div class="ico">
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <div class="ico" style="position:relative">
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <div class="badge">0</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<div class="hero">
+  <div class="slides" id="slides">
+    <div class="slide">
+      <img src="images/bracelet-blue.jpg" alt="Браслет с жемчугом">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-label">Новая коллекция</div>
+        <div class="slide-title">Жемчужная<br><em>нежность</em></div>
+        <a href="catalog.html" class="slide-btn">Смотреть коллекцию</a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/bracelet-stone.jpg" alt="Браслет на камне">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-label">Украшения из натуральных камней</div>
+        <div class="slide-title">Браслет<br><em>«Шёпот моря»</em></div>
+        <a href="catalog.html" class="slide-btn">Выбрать украшение</a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/brooch-velvet.jpg" alt="Брошь Серебряный дождь">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-label">Бестселлер сезона</div>
+        <div class="slide-title">Брошь<br><em>«Серебряный дождь»</em></div>
+        <a href="catalog.html" class="slide-btn">Смотреть бестселлеры</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-arr prev" onclick="chSlide(-1)">&#8592;</div>
+  <div class="hero-arr next" onclick="chSlide(1)">&#8594;</div>
+  <div class="dots">
+    <div class="dot on" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</div>
+
+<!-- CATEGORY NAV -->
+<div class="cats">
+  <div class="cats-inner">
+    <div class="cat on" onclick="setCat(this)">Новинки</div>
+    <div class="cat" onclick="setCat(this)">Бестселлеры</div>
+    <div class="cat" onclick="setCat(this)">Колье</div>
+    <div class="cat" onclick="setCat(this)">Браслеты</div>
+    <div class="cat" onclick="setCat(this)">Кольца</div>
+    <div class="cat" onclick="setCat(this)">Серьги</div>
+    <div class="cat" onclick="setCat(this)">Сеты</div>
+    <div class="cat" onclick="setCat(this)">Аксессуары</div>
+    <div class="cat" style="color:#c47a7a" onclick="setCat(this)">Распродажа</div>
+  </div>
+</div>
+
+<!-- НОВИНКИ -->
+<div style="background:#fff">
+  <div class="sec">
+    <div class="sec-hdr">
+      <div class="sec-title">Новинки</div>
+      <a href="catalog.html" class="sec-link">Смотреть все →</a>
+    </div>
+    <div class="grid">
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/bracelet-blue.jpg" alt="Колье с жемчугом">
+          <div class="pbadge bnew">Новинка</div>
+          <div class="pwish">
+            <svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </div>
+        <div class="ptype">Колье</div>
+        <div class="pname">Колье с жемчугом и кристаллами</div>
+        <div class="pprice">4 800 ₽</div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/bracelet-stone.jpg" alt="Браслет Шёпот моря">
+          <div class="pbadge bnew">Новинка</div>
+          <div class="pwish">
+            <svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </div>
+        <div class="ptype">Браслет</div>
+        <div class="pname">Браслет «Шёпот моря»</div>
+        <div class="pprice">3 200 ₽</div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/brooch-black.jpg" alt="Брошь Серебряный дождь">
+          <div class="pwish">
+            <svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </div>
+        <div class="ptype">Брошь</div>
+        <div class="pname">Брошь «Серебряный дождь»</div>
+        <div class="pprice">5 600 ₽</div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/brooch-jacket.jpg" alt="Брошь на пиджаке">
+          <div class="pbadge bnew">Новинка</div>
+          <div class="pwish">
+            <svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </div>
+        <div class="ptype">Брошь</div>
+        <div class="pname">Брошь «Серебряный дождь» на модели</div>
+        <div class="pprice">5 600 ₽</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="ban-in">
+    <div class="ban-img">
+      <img src="images/brooch-velvet.jpg" alt="Брошь на бархате">
+    </div>
+    <div>
+      <div class="ban-tag">Бестселлер сезона</div>
+      <div class="ban-title">Брошь<br><em>«Серебряный дождь»</em></div>
+      <div class="ban-desc">Авторская брошь ручной работы из серебряной проволоки с кристаллами. Изысканный акцент для любого образа — от повседневного до вечернего.</div>
+      <a href="catalog.html" class="btn-p">Купить сейчас</a>
+      <a href="catalog.html" class="btn-o">Весь каталог</a>
+    </div>
+  </div>
+</div>
+
+<!-- БЕСТСЕЛЛЕРЫ -->
+<div style="background:#fff">
+  <div class="sec">
+    <div class="sec-hdr">
+      <div class="sec-title">Бестселлеры</div>
+      <a href="catalog.html" class="sec-link">Смотреть все →</a>
+    </div>
+    <div class="grid">
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/brooch-velvet.jpg" alt="Брошь Серебряный дождь">
+          <div class="pwish"><svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="ptype">Брошь</div>
+        <div class="pname">Брошь «Серебряный дождь»</div>
+        <div class="pprice">5 600 ₽</div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/bracelet-blue.jpg" alt="Колье с жемчугом">
+          <div class="pwish"><svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="ptype">Колье</div>
+        <div class="pname">Колье с жемчугом и кристаллами</div>
+        <div class="pprice">4 800 ₽</div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/bracelet-stone.jpg" alt="Браслет Шёпот моря">
+          <div class="pwish"><svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="ptype">Браслет</div>
+        <div class="pname">Браслет «Шёпот моря»</div>
+        <div class="pprice">3 200 ₽</div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/brooch-jacket.jpg" alt="Брошь на пиджаке">
+          <div class="pwish"><svg width="13" height="13" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        </div>
+        <div class="ptype">Брошь</div>
+        <div class="pname">Брошь «Серебряный дождь» на модели</div>
+        <div class="pprice">5 600 ₽</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+  <div class="abt-in">
+    <div class="abt-tag">О бренде</div>
+    <div class="abt-title">Mia Perlina — украшения, созданные с любовью к эстетике и деталям.</div>
+    <div class="abt-desc">Каждое изделие создаётся вручную с использованием фурнитуры ювелирного качества, натурального жемчуга и природных камней, чтобы подчеркнуть вашу индивидуальность и стиль.</div>
+    <a href="about.html" class="btn-l">Узнать больше</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <span class="ft-brand-name">Mia Perlina</span>
+        <span class="ft-brand-sub">украшения ручной работы</span>
+        <p>Авторские украшения из жемчуга и натуральных камней. Каждое изделие создаётся с любовью к деталям.</p>
+        <div class="sub-row">
+          <input class="sub-in" type="email" placeholder="Ваш e-mail">
+          <button class="sub-btn">Подписаться</button>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Каталог</h4>
+        <ul>
+          <li><a href="catalog.html">Новинки</a></li>
+          <li><a href="catalog.html">Бестселлеры</a></li>
+          <li><a href="catalog.html">Колье</a></li>
+          <li><a href="catalog.html">Браслеты</a></li>
+          <li><a href="catalog.html">Кольца</a></li>
+          <li><a href="catalog.html">Серьги</a></li>
+          <li><a href="catalog.html">Сеты</a></li>
+          <li><a href="catalog.html" style="color:#c47a7a">Распродажа</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>О Mia Perlina</h4>
+        <ul>
+          <li><a href="about.html">О бренде</a></li>
+          <li><a href="about.html#reviews">Отзывы покупателей</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+          <li><a href="#">Программа лояльности</a></li>
+          <li><a href="#">Подарочные карты</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Покупателям</h4>
+        <ul>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Возврат</a></li>
+          <li><a href="#">Вопросы и ответы</a></li>
+          <li><a href="#">Помощь</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div class="ft-copy">© 2026 Mia Perlina. Все права защищены.</div>
+      <div class="socials">
+        <a href="#" class="soc">ВКонтакте</a>
+        <a href="#" class="soc">Telegram</a>
+        <a href="#" class="soc">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
