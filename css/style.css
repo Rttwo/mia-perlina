@@ -234,3 +234,13 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .about-v2-text{padding:40px 24px}
   .about-v2-text div[style*="font-size:36px"]{font-size:26px !important}
 }
+
+/* About v3 — dark blurred bg, photo left in frame, text right */
+@media(max-width:768px){
+  .about-v3-inner{grid-template-columns:1fr !important;gap:32px !important;padding:48px 24px !important}
+  .about-v3-img img{aspect-ratio:4/3 !important;max-height:260px;width:100%}
+  .about-v3-text div[style*="font-size:38px"]{font-size:26px !important}
+  .about-v2-wrap{grid-template-columns:1fr !important}
+  .about-v2-img{height:280px !important}
+  .about-v2-text{padding:36px 20px !important}
+}
