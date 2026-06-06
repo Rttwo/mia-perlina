@@ -200,10 +200,13 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .slide-fg{display:none}
   .slide-bg{filter:blur(3px) brightness(0.5)}
   .slide-overlay{background:linear-gradient(to bottom, rgba(8,16,28,0.65) 0%, rgba(8,16,28,0.55) 50%, rgba(8,16,28,0.4) 100%)}
-  .slide-content{left:20px;right:20px;max-width:100%;top:45%}
-  .slide-title{font-size:34px;text-shadow:0 2px 8px rgba(0,0,0,0.6)}
-  .slide-label{text-shadow:0 1px 4px rgba(0,0,0,0.5)}
-  .slide-btn{text-shadow:none}
+  .slide-content{left:20px;right:20px;max-width:100%;top:45%;z-index:5}
+  .slide-content-inner{display:inline-block;background:rgba(10,18,30,0.55);backdrop-filter:blur(4px);padding:16px 20px;border-left:2px solid rgba(255,255,255,0.3)}
+  .slide-title{font-size:32px;text-shadow:none}
+  .slide-label{text-shadow:none;margin-bottom:8px}
+  .slide-btn{margin-top:4px}
   .hero{height:400px}
-  .hero-arr{z-index:10;width:36px;height:36px}
+  .hero-arr{z-index:20 !important;width:36px;height:36px}
+  .slides{z-index:1}
+  .slide-bg{z-index:0}
 }
