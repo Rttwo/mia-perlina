@@ -222,53 +222,23 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .about-v2-text div[style*="font-size:36px"]{font-size:26px !important}
 }
 
-/* About v3 — dark blurred bg, photo left in frame, text right */
-@media(max-width:768px){
-  .about-v3-section{overflow:visible}
-  .about-v3-inner{
-    grid-template-columns:1fr !important;
-    gap:24px !important;
-    padding:36px 20px !important;
-  }
-  .about-v3-img{width:100% !important}
-  .about-v3-img img{
-    aspect-ratio:3/2 !important;
-    max-height:220px !important;
-    width:100% !important;
-    object-fit:cover !important;
-  }
-  .about-v3-text{
-    text-align:center !important;
-    padding:0 !important;
-  }
-  .about-v3-text div[style*="font-size:38px"]{font-size:22px !important;line-height:1.4 !important}
-  .about-v3-text div[style*="font-size:13px"]{font-size:12px !important}
-  .about-v2-wrap{grid-template-columns:1fr !important}
-  .about-v2-img{height:260px !important}
-  .about-v2-text{padding:32px 20px !important}
-}
 
-
-/* About v3 — homepage О бренде section, mobile */
+/* Homepage about section mobile */
 @media(max-width:768px){
-  .about-v3-section{overflow:hidden !important}
-  .about-v3-inner{
+  #about-home{
     grid-template-columns:1fr !important;
     padding:0 !important;
     gap:0 !important;
   }
-  .about-v3-img{width:100% !important}
-  .about-v3-img img{
+  #about-home-img{
     width:100% !important;
     aspect-ratio:4/3 !important;
-    object-fit:cover !important;
     box-shadow:none !important;
   }
-  .about-v3-text{
-    text-align:center !important;
+  #about-home-text{
     padding:28px 20px 36px !important;
+    text-align:center !important;
   }
-  .about-v3-text div[style*="font-size:38px"]{font-size:22px !important;line-height:1.4 !important}
-  .about-v3-text div[style*="font-size:13px"]{font-size:12px !important}
-  .about-v3-text a{display:block !important;text-align:center !important}
+  #about-home-text div[style*="font-size:38px"]{font-size:22px !important;line-height:1.4 !important}
+  #about-home-text div[style*="font-size:13px"]{font-size:12px !important}
 }
