@@ -231,7 +231,9 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
     gap:0 !important;
   }
   #about-home-img{
-    width:100% !important;
+    width:88% !important;
+    margin:0 auto !important;
+    display:block !important;
     aspect-ratio:4/3 !important;
     box-shadow:none !important;
   }
