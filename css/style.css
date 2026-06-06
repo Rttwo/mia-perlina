@@ -22,7 +22,9 @@ a{text-decoration:none;color:inherit}
 /* HEADER */
 header{background:#fff;border-bottom:1px solid var(--ch-pale);position:sticky;top:0;z-index:100}
 .hdr{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo-wrap{display:flex;align-items:center;gap:10px}
+.logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer}
+.logo-wrap:hover .logo-txt{color:var(--ch-dark)}
+.logo-wrap:hover .logo-sub{color:var(--ch)}
 .logo-txt{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;letter-spacing:1px;color:var(--navy)}
 .logo-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--ch);margin-top:-2px}
 nav a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);transition:color .2s;font-weight:500;margin-left:24px}
@@ -136,27 +138,27 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
 .logo-img{width:36px;height:36px;object-fit:contain;flex-shrink:0;display:block}
 .slide img{object-fit:contain !important}
 
-/* Hero bg+fg blur effect */
+/* Hero bg+fg effect */
 .slide{position:relative;overflow:hidden}
 .slide-bg{
-  position:absolute;inset:-8%;
+  position:absolute;inset:-4%;
   background-size:cover;background-position:center;
-  filter:blur(22px) brightness(0.45);
-  transform:scale(1.12);
+  filter:blur(5px) brightness(0.72);
+  transform:scale(1.05);
   z-index:0;
 }
 .slide-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(to right, rgba(8,16,28,0.72) 0%, rgba(8,16,28,0.25) 48%, rgba(8,16,28,0.05) 100%);
+  background:linear-gradient(to right, rgba(8,16,28,0.58) 0%, rgba(8,16,28,0.18) 45%, rgba(8,16,28,0.04) 100%);
   z-index:1;
 }
 .slide-content{position:absolute;top:50%;left:56px;transform:translateY(-50%);color:#fff;max-width:380px;z-index:3}
 .slide-fg{
   position:absolute;
-  top:50%;right:6%;
+  top:50%;right:5%;
   transform:translateY(-50%);
-  height:92%;
-  width:52%;
+  height:94%;
+  width:50%;
   display:flex;align-items:center;justify-content:center;
   z-index:2;
 }
@@ -166,7 +168,7 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   width:auto;
   height:auto;
   object-fit:contain;
-  filter:drop-shadow(0 4px 24px rgba(0,0,0,0.6));
+  filter:drop-shadow(0 6px 28px rgba(0,0,0,0.55));
 }
 
 /* Mobile burger menu */
