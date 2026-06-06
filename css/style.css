@@ -200,7 +200,7 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .hero{height:560px}
   .slide-bg{filter:blur(4px) brightness(0.45)}
   .slide-overlay{background:linear-gradient(to top, rgba(8,16,28,0.97) 0%, rgba(8,16,28,0.85) 24%, rgba(8,16,28,0.05) 100%)}
-  .slide-fg{top:0%;left:50%;right:auto;transform:translateX(-50%);height:70%;width:96%;z-index:4}
+  .slide-fg{top:0%;left:50%;right:auto;transform:translateX(-50%);height:74%;width:100%;z-index:4}
   .slide-fg img{max-width:100%;max-height:100%;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5))}
   .slide-content{top:auto;bottom:8px;left:0;right:0;transform:none;z-index:5;text-align:center;padding:0 16px;max-width:none}
   .slide-content-inner{background:none;padding:0;border-left:none;width:100%}
