@@ -298,24 +298,23 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
 /* About v3 mobile — matches О бренде page */
 @media(max-width:768px){
   .about-v3-section{overflow:hidden !important}
-  .about-v3-bg{display:none !important}
+  .about-v3-bg{filter:blur(20px) brightness(0.25) !important;transform:scale(1.08) !important}
   .about-v3-inner{
     grid-template-columns:1fr !important;
-    padding:0 !important;
+    padding:24px 20px 0 20px !important;
     gap:0 !important;
-    background:#0e1824;
+    background:transparent;
   }
   .about-v3-img{width:100% !important}
   .about-v3-img img{
     width:100% !important;
     aspect-ratio:4/3 !important;
     object-fit:cover !important;
-    box-shadow:none !important;
+    box-shadow:0 8px 32px rgba(0,0,0,0.5) !important;
   }
   .about-v3-text{
     text-align:center !important;
     padding:28px 20px 36px !important;
-    background:#0e1824;
   }
   .about-v3-text div[style*="font-size:38px"]{font-size:22px !important;line-height:1.4 !important}
   .about-v3-text div[style*="font-size:13px"]{font-size:12px !important}
