@@ -129,7 +129,7 @@ document.addEventListener('click', function(e) {
   if(!wrap) return;
   wrap.innerHTML += wrap.innerHTML;
   var fullW = wrap.scrollWidth / 2;
-  var speed = window.innerWidth < 769 ? 120 : 60;
+  var speed = window.innerWidth < 769 ? 60 : 60;
   var pos = 0, last = null;
   function step(ts){
     if(last) pos += (ts - last) / 1000 * speed;

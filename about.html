@@ -39,11 +39,30 @@
 
 /* Mobile */
 @media(max-width:768px){
-  .brand-hero-inner{grid-template-columns:1fr !important;gap:24px;padding:36px 20px}
-  .brand-hero-img img{aspect-ratio:3/2;max-height:220px;object-fit:cover}
-  .brand-hero-text{text-align:center}
-  .brand-hero-title{font-size:26px}
-  .about-content{padding:48px 20px}
+  .brand-hero-inner{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+    padding:32px 20px !important;
+    width:100% !important;
+    overflow:hidden !important;
+  }
+  .brand-hero-img{width:100% !important;max-width:100% !important}
+  .brand-hero-img img{
+    width:100% !important;
+    aspect-ratio:1/1 !important;
+    max-height:none !important;
+    object-fit:cover !important;
+  }
+  .brand-hero-text{
+    text-align:center !important;
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 !important;
+    overflow:hidden !important;
+  }
+  .brand-hero-title{font-size:22px !important;line-height:1.4 !important}
+  .brand-hero-sub{font-size:12px !important}
+  .about-content{padding:40px 20px}
   .values{grid-template-columns:1fr}
 }
 </style>
@@ -178,7 +197,7 @@ document.addEventListener('click',function(e){
   if(!wrap) return;
   wrap.innerHTML += wrap.innerHTML;
   var fullW = wrap.scrollWidth / 2;
-  var speed = window.innerWidth < 769 ? 120 : 60;
+  var speed = window.innerWidth < 769 ? 60 : 60;
   var pos = 0, last = null;
   function step(ts){
     if(last) pos += (ts - last) / 1000 * speed;

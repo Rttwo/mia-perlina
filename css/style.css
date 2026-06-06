@@ -260,3 +260,11 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .about-v2-img{height:260px !important}
   .about-v2-text{padding:32px 20px !important}
 }
+
+/* Force fix mobile about overflow */
+@media(max-width:768px){
+  .about-v3-section,.about-v3-inner{overflow:hidden !important;max-width:100vw !important}
+  .about-v3-inner{grid-template-columns:1fr !important;padding:32px 20px !important;gap:24px !important}
+  .about-v3-img,.about-v3-img img{width:100% !important;max-width:100% !important;aspect-ratio:1/1 !important;object-fit:cover !important}
+  .about-v3-text{width:100% !important;max-width:100% !important;text-align:center !important;padding:0 !important}
+}
