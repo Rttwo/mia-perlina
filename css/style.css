@@ -132,3 +132,6 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .slide-content{left:24px}
   .hero{height:420px}
 }
+
+.logo-img{width:44px;height:44px;object-fit:contain;border-radius:50%}
+.slide img{object-fit:contain !important}
