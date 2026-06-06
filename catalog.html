@@ -18,19 +18,13 @@
 @media(max-width:768px){.catalog-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head><body>
-<div class="ticker"><div class="tick-wrap">
-  <span class="tick-item">Доставка по всей России</span><span class="tick-item">•</span>
-  <span class="tick-item">Украшения ручной работы</span><span class="tick-item">•</span>
-  <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-item">•</span>
-  <span class="tick-item">Доставка по всей России</span><span class="tick-item">•</span>
-  <span class="tick-item">Украшения ручной работы</span><span class="tick-item">•</span>
-  <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-item">•</span>
-  <span class="tick-item">Доставка по всей России</span><span class="tick-item">•</span>
-  <span class="tick-item">Украшения ручной работы</span><span class="tick-item">•</span>
-  <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-item">•</span>
-  <span class="tick-item">Доставка по всей России</span><span class="tick-item">•</span>
-  <span class="tick-item">Украшения ручной работы</span><span class="tick-item">•</span>
-  <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-item">•</span>
+<div class="ticker"><div class="tick-wrap" id="tickWrap">
+  <span class="tick-item">Доставка по всей России</span><span class="tick-sep">•</span>
+  <span class="tick-item">Украшения ручной работы</span><span class="tick-sep">•</span>
+  <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-sep">•</span>
+  <span class="tick-item">Доставка по всей России</span><span class="tick-sep">•</span>
+  <span class="tick-item">Украшения ручной работы</span><span class="tick-sep">•</span>
+  <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-sep">•</span>
 </div></div>
 <header style="position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--ch-pale)">
   <div class="hdr">
@@ -46,7 +40,7 @@
     <div class="hdr-icons">
       <div class="ico"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
       <div class="ico"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-      <div class="ico" style="position:relative"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><div class="badge">0</div></div>
+      <a href="cart.html" class="ico" style="position:relative"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><div class="badge" style="display:none">0</div></a>
       <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
         <span></span><span></span><span></span>
       </button>
@@ -96,7 +90,7 @@
 <footer><div class="ft-in">
   <div class="ft-bot" style="border-top:1px solid var(--ch-pale);padding-top:22px">
     <div class="ft-copy">© 2026 Mia Perlina. Все права защищены.</div>
-    <div class="socials"><a href="#" class="soc">ВКонтакте</a><a href="#" class="soc">Telegram</a><a href="#" class="soc">Instagram</a></div>
+    <div class="socials"><a href="https://vk.com/miaperlina" target="_blank" class="soc">ВКонтакте</a><a href="https://t.me/miaperlina" target="_blank" class="soc">Telegram</a><a href="#" class="soc">Instagram</a></div>
   </div>
 </div></footer>
 <script>
@@ -133,4 +127,25 @@ document.addEventListener('click', function(e) {
 });
 </script>
 
+<script src="js/cart.js"></script>
+<script>
+(function(){
+  var wrap = document.getElementById('tickWrap');
+  if(!wrap) return;
+  // Clone content for seamless loop
+  wrap.innerHTML += wrap.innerHTML;
+  var fullW = wrap.scrollWidth / 2;
+  var speed = window.innerWidth < 769 ? 60 : 120; // px per second
+  var pos = 0;
+  var last = null;
+  function step(ts){
+    if(last) pos += (ts - last) / 1000 * speed;
+    last = ts;
+    if(pos >= fullW) pos -= fullW;
+    wrap.style.transform = 'translateX(-' + pos + 'px)';
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+})();
+</script>
 </body></html>

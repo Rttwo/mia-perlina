@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакты — Mia Perlina</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Корзина — Mia Perlina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.page-hero{background:var(--ch-pale);padding:72px 24px;text-align:center}
-.page-hero-title{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--navy);margin-bottom:10px}
-.page-hero-sub{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.contact-wrap{max-width:900px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px}
-.contact-info h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--navy);margin-bottom:24px}
-.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:24px}
-.contact-item svg{flex-shrink:0;margin-top:2px;color:var(--ch-dark)}
-.contact-item-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.contact-item-val{font-size:14px;color:var(--navy)}
-.contact-form h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--navy);margin-bottom:24px}
-.form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.form-group input,.form-group textarea{width:100%;padding:10px 14px;border:1px solid var(--ch-light);font-size:13px;font-family:'Raleway',sans-serif;outline:none;background:#fff;color:var(--text);transition:border-color .2s}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--ch)}
-.form-group textarea{height:120px;resize:vertical}
-@media(max-width:768px){.contact-wrap{grid-template-columns:1fr}}
+.page-hero{background:var(--ch-pale);padding:44px 24px;text-align:center}
+.page-hero-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--navy)}
+.cart-wrap{max-width:1100px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start}
+.cart-left h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--navy);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--ch-pale)}
+.cart-item{display:grid;grid-template-columns:80px 1fr auto auto auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--ch-pale)}
+.ci-img{width:80px;height:80px;overflow:hidden;background:var(--ch-pale);flex-shrink:0}
+.ci-img img{width:100%;height:100%;object-fit:contain;padding:6px}
+.ci-name{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy);margin-bottom:6px;line-height:1.3}
+.ci-price{font-size:13px;color:var(--muted)}
+.ci-qty{display:flex;align-items:center;gap:0;border:1px solid var(--ch-light)}
+.ci-qty button{width:32px;height:32px;background:none;border:none;cursor:pointer;font-size:18px;color:var(--navy);font-family:'Raleway',sans-serif;transition:background .2s}
+.ci-qty button:hover{background:var(--ch-pale)}
+.ci-qty span{width:32px;text-align:center;font-size:14px;color:var(--navy)}
+.ci-total{font-size:15px;font-weight:500;color:var(--navy);min-width:80px;text-align:right}
+.ci-del{background:none;border:none;cursor:pointer;color:var(--muted);font-size:14px;padding:4px;transition:color .2s}
+.ci-del:hover{color:#c47a7a}
+.cart-right{position:sticky;top:90px}
+.cart-block{background:#fff;border:1px solid var(--ch-pale);padding:24px;margin-bottom:20px}
+.cart-block h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:18px;font-weight:600}
+.delivery-opt,.payment-opt{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--ch-light);margin-bottom:10px;cursor:pointer;transition:all .2s;position:relative}
+.delivery-opt:hover,.payment-opt:hover{border-color:var(--ch)}
+.delivery-opt.selected,.payment-opt.selected{border-color:var(--ch-dark);background:var(--ch-pale)}
+.delivery-opt.selected::after,.payment-opt.selected::after{content:'✓';position:absolute;right:14px;color:var(--ch-dark);font-size:14px}
+.opt-icon{width:36px;height:36px;background:var(--ch-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.opt-name{font-size:13px;color:var(--navy);font-weight:500}
+.opt-desc{font-size:11px;color:var(--muted);margin-top:2px}
+.opt-price{font-size:12px;color:var(--ch-dark);margin-left:auto;margin-right:28px;font-weight:500}
+.payment-logo{font-size:13px;font-weight:600;color:var(--navy)}
+.payment-sub{font-size:11px;color:var(--muted)}
+.soon-badge{font-size:9px;background:var(--ch-pale);color:var(--ch-dark);padding:2px 7px;letter-spacing:1px;text-transform:uppercase;margin-left:auto;margin-right:28px}
+.summary-row{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:10px}
+.summary-total{display:flex;justify-content:space-between;font-size:17px;color:var(--navy);font-weight:500;padding-top:14px;border-top:1px solid var(--ch-pale);margin-top:4px}
+.checkout-btn{width:100%;padding:16px;background:var(--ch-dark);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:'Raleway',sans-serif;transition:background .3s;margin-top:16px}
+.checkout-btn:hover{background:var(--navy)}
+@media(max-width:900px){
+  .cart-wrap{grid-template-columns:1fr}
+  .cart-right{position:static}
+}
+@media(max-width:600px){
+  .cart-item{grid-template-columns:60px 1fr auto;grid-template-rows:auto auto}
+  .ci-total{display:none}
+  .ci-del{grid-column:3;grid-row:1}
+  .ci-qty{grid-column:2;grid-row:2}
+}
 </style>
 </head>
 <body>
@@ -36,122 +63,138 @@
   <span class="tick-item">Украшения ручной работы</span><span class="tick-sep">•</span>
   <span class="tick-item">Жемчуг и натуральные камни</span><span class="tick-sep">•</span>
 </div></div>
+
 <header style="position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--ch-pale)">
   <div class="hdr">
     <a href="index.html" class="logo-wrap" style="text-decoration:none">
       <img src="data:image/png;base64,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" alt="Mia Perlina" class="logo-img">
       <div><div class="logo-txt">Mia Perlina</div><div class="logo-sub">украшения ручной работы</div></div>
     </a>
-    <nav><a href="index.html" class="">Главная</a>
-<a href="catalog.html" class="">Каталог</a>
-<a href="about.html" class="">О бренде</a>
-<a href="#" class="">Программа лояльности</a>
-<a href="contact.html" class="on">Контакты</a></nav>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">О бренде</a>
+      <a href="#">Программа лояльности</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
     <div class="hdr-icons">
       <div class="ico"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
       <div class="ico"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-      <a href="cart.html" class="ico" style="position:relative"><svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><div class="badge" style="display:none">0</div></a>
-      <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="cart.html" class="ico" style="position:relative">
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <div class="badge" style="display:none">0</div>
+      </a>
+      <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="mobile-menu" id="mobileMenu"><a href="index.html" class="">Главная</a>
-<a href="catalog.html" class="">Каталог</a>
-<a href="about.html" class="">О бренде</a>
-<a href="#" class="">Программа лояльности</a>
-<a href="contact.html" class="on">Контакты</a></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="about.html">О бренде</a>
+    <a href="#">Программа лояльности</a>
+    <a href="contact.html">Контакты</a>
+  </div>
 </header>
 
-<div class="page-hero">
-  <div class="page-hero-title">Контакты</div>
-  <div class="page-hero-sub">Мы всегда на связи</div>
+<div class="page-hero"><div class="page-hero-title">Корзина</div></div>
+
+<div class="cart-wrap">
+  <div class="cart-left">
+    <h3>Ваши украшения</h3>
+    <div id="cart-items"></div>
+  </div>
+
+  <div class="cart-right" id="cart-summary" style="display:none">
+
+    <!-- Доставка -->
+    <div class="cart-block">
+      <h4>Способ доставки</h4>
+      <div class="delivery-opt" data-name="Самовывоз" data-price="0" onclick="selectDelivery(this)">
+        <div class="opt-icon">
+          <svg width="18" height="18" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div><div class="opt-name">Самовывоз</div><div class="opt-desc">По договорённости</div></div>
+        
+      </div>
+      <div class="delivery-opt" data-name="СДЭК" data-price="0" onclick="selectDelivery(this)">
+        <div class="opt-icon">
+          <svg width="18" height="18" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div><div class="opt-name">СДЭК</div><div class="opt-desc">2–5 дней</div></div>
+        
+      </div>
+      <div class="delivery-opt" data-name="Почта России" data-price="0" onclick="selectDelivery(this)">
+        <div class="opt-icon">
+          <svg width="18" height="18" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div><div class="opt-name">Почта России</div><div class="opt-desc">5–14 дней</div></div>
+        
+      </div>
+    </div>
+
+    <!-- Оплата -->
+    <div class="cart-block">
+      <h4>Способ оплаты</h4>
+      <div class="payment-opt" onclick="selectPayment(this)">
+        <div class="opt-icon">
+          <svg width="18" height="18" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <div><div class="payment-logo">ЮКасса</div><div class="payment-sub">Карта, Apple Pay, Google Pay</div></div>
+        <div class="soon-badge">Скоро</div>
+      </div>
+      <div class="payment-opt" onclick="selectPayment(this)">
+        <div class="opt-icon">
+          <svg width="18" height="18" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div><div class="payment-logo">СБП</div><div class="payment-sub">Система быстрых платежей</div></div>
+        <div class="soon-badge">Скоро</div>
+      </div>
+      <div class="payment-opt" onclick="selectPayment(this)">
+        <div class="opt-icon">
+          <svg width="18" height="18" fill="none" stroke="#4a6480" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div><div class="payment-logo">По договорённости</div><div class="payment-sub">Свяжитесь с нами в Telegram</div></div>
+      </div>
+    </div>
+
+    <!-- Итого -->
+    <div class="cart-block">
+      <h4>Итого</h4>
+      <div class="summary-row"><span>Товары</span><span id="subtotal">0 ₽</span></div>
+      <div class="summary-row"><span>Доставка</span><span id="delivery-cost">—</span></div>
+      <div class="summary-total"><span>К оплате</span><span id="total">0 ₽</span></div>
+      <button class="checkout-btn" onclick="alert('Оплата будет доступна после подключения платёжной системы. Для оформления заказа напишите нам в Telegram: @miaperlina')">
+        Оформить заказ
+      </button>
+      <div style="text-align:center;margin-top:12px;font-size:11px;color:var(--muted)">
+        Или напишите нам в <a href="https://t.me/miaperlina" target="_blank" style="color:var(--ch-dark)">Telegram</a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<div class="contact-wrap">
-  <div class="contact-info">
-    <h3>Свяжитесь с нами</h3>
-    <div class="contact-item">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-      <div>
-        <div class="contact-item-label">Телефон</div>
-        <div class="contact-item-val">+7 (___) ___-__-__</div>
-      </div>
-    </div>
-    <div class="contact-item">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <div>
-        <div class="contact-item-label">Email</div>
-        <div class="contact-item-val">info@miaperlina.ru</div>
-      </div>
-    </div>
-    <div class="contact-item">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 2H3v16h5l3 3 3-3h7z"/></svg>
-      <div>
-        <div class="contact-item-label">Telegram</div>
-        <div class="contact-item-val">@miaperlina</div>
-      </div>
-    </div>
-    <div class="contact-item">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      <div>
-        <div class="contact-item-label">Instagram</div>
-        <div class="contact-item-val">@mia.perlina</div>
-      </div>
+<footer><div class="ft-in">
+  <div class="ft-bot" style="border-top:1px solid var(--ch-pale);padding-top:22px">
+    <div class="ft-copy">© 2026 Mia Perlina. Все права защищены.</div>
+    <div class="socials">
+      <a href="https://vk.com/miaperlina" target="_blank" class="soc">ВКонтакте</a>
+      <a href="https://t.me/miaperlina" target="_blank" class="soc">Telegram</a>
     </div>
   </div>
-
-  <div class="contact-form">
-    <h3>Напишите нам</h3>
-    <div class="form-group">
-      <label>Ваше имя</label>
-      <input type="text" placeholder="Как вас зовут?">
-    </div>
-    <div class="form-group">
-      <label>Email или телефон</label>
-      <input type="text" placeholder="Как с вами связаться?">
-    </div>
-    <div class="form-group">
-      <label>Сообщение</label>
-      <textarea placeholder="Ваш вопрос или пожелание..."></textarea>
-    </div>
-    <button class="btn-p" style="width:100%;font-family:'Raleway',sans-serif;cursor:pointer">Отправить</button>
-  </div>
-</div>
-
-<footer>
-  <div class="ft-in">
-    <div class="ft-bot" style="border-top:1px solid var(--ch-pale);padding-top:22px">
-      <div class="ft-copy">© 2026 Mia Perlina. Все права защищены.</div>
-      <div class="socials">
-        <a href="https://vk.com/miaperlina" target="_blank" class="soc">ВКонтакте</a>
-        <a href="https://t.me/miaperlina" target="_blank" class="soc">Telegram</a>
-        <a href="#" class="soc">Instagram</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-<script>
-function toggleMenu() {
-  const burger = document.getElementById('burger');
-  const menu = document.getElementById('mobileMenu');
-  burger.classList.toggle('open');
-  menu.classList.toggle('open');
-}
-// Close menu on outside click
-document.addEventListener('click', function(e) {
-  const burger = document.getElementById('burger');
-  const menu = document.getElementById('mobileMenu');
-  if (burger && menu && !burger.contains(e.target) && !menu.contains(e.target)) {
-    burger.classList.remove('open');
-    menu.classList.remove('open');
-  }
-});
-</script>
+</div></footer>
 
 <script src="js/cart.js"></script>
+<script>
+function toggleMenu(){
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+  if(b&&m&&!b.contains(e.target)&&!m.contains(e.target)){b.classList.remove('open');m.classList.remove('open');}
+});
+</script>
 <script>
 (function(){
   var wrap = document.getElementById('tickWrap');
@@ -172,5 +215,4 @@ document.addEventListener('click', function(e) {
   requestAnimationFrame(step);
 })();
 </script>
-</body>
-</html>
+</body></html>
