@@ -181,6 +181,7 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
 .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 .mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--ch-pale);z-index:150;flex-direction:column;padding:0}
 .mobile-menu.open{display:flex}
+@media(min-width:901px){.mobile-menu{display:none !important}}
 .mobile-menu a{padding:14px 24px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--ch-pale);font-weight:500;font-family:'Raleway',sans-serif;text-decoration:none;transition:color .2s}
 .mobile-menu a:hover,.mobile-menu a.on{color:var(--navy);background:var(--ch-pale)}
 .mobile-menu a:last-child{border-bottom:none}
@@ -193,4 +194,13 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .hdr{padding:0 16px}
   .logo-txt{font-size:16px}
   .logo-sub{font-size:8px}
+}
+
+@media(max-width:768px){
+  .slide-fg{display:none}
+  .slide-bg{filter:blur(3px) brightness(0.55)}
+  .slide-overlay{background:rgba(8,16,28,0.45)}
+  .slide-content{left:24px;right:24px;max-width:100%}
+  .slide-title{font-size:36px}
+  .hero{height:380px}
 }
