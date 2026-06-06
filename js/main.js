@@ -21,7 +21,7 @@ function goSlide(i) {
 }
 
 // Auto-advance
-setInterval(() => chSlide(1), 5000);
+setInterval(() => chSlide(1), 10000);
 
 // Category tabs
 function setCat(el) {
