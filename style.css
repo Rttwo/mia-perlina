@@ -18,7 +18,7 @@ a{text-decoration:none;color:inherit}
 .tick-wrap{display:flex;white-space:nowrap;animation:tick 28s linear infinite}
 .tick-item{padding:0 28px}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-@media(max-width:768px){.tick-wrap{animation-duration:4s}}
+@media(max-width:768px){.tick-wrap{animation-duration:2s}}
 
 /* HEADER */
 header{background:#fff;border-bottom:1px solid var(--ch-pale);position:sticky;top:0;z-index:100}
@@ -47,7 +47,7 @@ nav a:hover,nav a.on{color:var(--navy)}
 .slide-title em{font-style:italic;font-weight:400}
 .slide-btn{display:inline-block;padding:11px 30px;border:1px solid rgba(255,255,255,.6);color:#fff;font-size:10px;letter-spacing:2px;text-transform:uppercase;transition:all .3s;background:transparent}
 .slide-btn:hover{background:rgba(255,255,255,.15)}
-.hero-arr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:20px;transition:all .3s}
+.hero-arr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;font-size:20px;transition:all .3s;z-index:10}
 .hero-arr:hover{background:rgba(255,255,255,.32)}
 .prev{left:20px}.next{right:20px}
 .dots{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
@@ -198,9 +198,12 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
 
 @media(max-width:768px){
   .slide-fg{display:none}
-  .slide-bg{filter:blur(3px) brightness(0.55)}
-  .slide-overlay{background:rgba(8,16,28,0.45)}
-  .slide-content{left:24px;right:24px;max-width:100%}
-  .slide-title{font-size:36px}
-  .hero{height:380px}
+  .slide-bg{filter:blur(3px) brightness(0.5)}
+  .slide-overlay{background:linear-gradient(to bottom, rgba(8,16,28,0.65) 0%, rgba(8,16,28,0.55) 50%, rgba(8,16,28,0.4) 100%)}
+  .slide-content{left:20px;right:20px;max-width:100%;top:45%}
+  .slide-title{font-size:34px;text-shadow:0 2px 8px rgba(0,0,0,0.6)}
+  .slide-label{text-shadow:0 1px 4px rgba(0,0,0,0.5)}
+  .slide-btn{text-shadow:none}
+  .hero{height:400px}
+  .hero-arr{z-index:10;width:36px;height:36px}
 }
