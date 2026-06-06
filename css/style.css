@@ -133,5 +133,35 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   .hero{height:420px}
 }
 
-.logo-img{width:44px;height:44px;object-fit:contain;border-radius:50%}
+.logo-img{width:48px;height:48px;object-fit:contain;flex-shrink:0;display:block}
 .slide img{object-fit:contain !important}
+
+/* Hero bg+fg blur effect */
+.slide{position:relative;overflow:hidden}
+.slide-bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  filter:blur(18px) brightness(0.55);
+  transform:scale(1.08);
+  z-index:0;
+}
+.slide-fg{
+  position:absolute;
+  top:50%;right:10%;
+  transform:translateY(-50%);
+  height:88%;
+  display:flex;align-items:center;justify-content:center;
+  z-index:1;
+}
+.slide-fg img{
+  height:100%;width:auto;
+  max-width:55%;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 32px rgba(0,0,0,0.45));
+}
+.slide-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right, rgba(10,18,30,0.62) 0%, rgba(10,18,30,0.18) 55%, transparent 100%);
+  z-index:2;
+}
+.slide-content{z-index:3}
