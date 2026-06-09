@@ -244,3 +244,7 @@ footer{background:var(--off);border-top:1px solid var(--ch-pale);padding:56px 24
   #about-home-text div[style*="font-size:38px"]{font-size:22px !important;line-height:1.4 !important}
   #about-home-text div[style*="font-size:13px"]{font-size:12px !important}
 }
+
+/* Phone copy button */
+.phone-copy:active{background:rgba(255,255,255,0.15)}
+.phone-copy .phone-text{transition:all .2s}
