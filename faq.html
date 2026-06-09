@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Оплата и доставка — Mia Perlina</title>
+<title>Вопросы и ответы — Mia Perlina</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -10,24 +10,22 @@
 .page-hero{background:var(--ch-pale);padding:64px 24px;text-align:center}
 .page-hero-title{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--navy)}
 .page-hero-sub{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:8px}
-.delivery-wrap{max-width:800px;margin:0 auto;padding:64px 24px}
-.delivery-block{margin-bottom:48px}
-.delivery-block h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--navy);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--ch-pale)}
-.delivery-block p{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:16px}
-.delivery-item{display:flex;gap:20px;align-items:flex-start;padding:20px 24px;background:var(--ch-pale);margin-bottom:12px}
-.delivery-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--ch-dark);flex-shrink:0;line-height:1}
-.delivery-info h3{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px;letter-spacing:0.5px}
-.delivery-info p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
-.payment-card{display:flex;align-items:center;gap:16px;padding:20px 24px;border:1px solid var(--ch-light);margin-bottom:12px}
-.payment-card svg{color:var(--ch-dark);flex-shrink:0}
-.payment-card-text h3{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
-.payment-card-text p{font-size:13px;color:var(--muted);margin:0;line-height:1.6}
-.notice{background:var(--ch-pale);border-left:3px solid var(--ch);padding:16px 20px;margin-top:24px}
-.notice p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.faq-wrap{max-width:800px;margin:0 auto;padding:64px 24px}
+.faq-item{border-bottom:1px solid var(--ch-pale);overflow:hidden}
+.faq-item:first-child{border-top:1px solid var(--ch-pale)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;gap:16px}
+.faq-q-text{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--navy);line-height:1.3}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border:1px solid var(--ch-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ch-dark);font-size:16px;transition:transform .3s;}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:22px}
+.faq-a p{font-size:14px;line-height:1.9;color:var(--muted);margin:0}
+.faq-a .coming-soon{display:inline-block;padding:6px 16px;background:var(--ch-pale);color:var(--ch-dark);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:8px}
 @media(max-width:768px){
-  .delivery-wrap{padding:40px 20px}
+  .faq-wrap{padding:40px 20px}
   .page-hero{padding:48px 20px}
   .page-hero-title{font-size:32px}
+  .faq-q-text{font-size:17px}
 }
 </style>
 </head>
@@ -52,7 +50,7 @@
       <a href="index.html">Главная</a>
       <a href="catalog.html">Каталог</a>
       <a href="about.html">О бренде</a>
-      <a href="delivery.html" class="on">Оплата и доставка</a>
+      <a href="delivery.html">Оплата и доставка</a>
       <a href="contact.html">Контакты</a>
     </nav>
     <div class="hdr-icons">
@@ -66,56 +64,56 @@
     <a href="index.html">Главная</a>
     <a href="catalog.html">Каталог</a>
     <a href="about.html">О бренде</a>
-    <a href="delivery.html" class="on">Оплата и доставка</a>
+    <a href="delivery.html">Оплата и доставка</a>
     <a href="contact.html">Контакты</a>
   </div>
 </header>
 
 <div class="page-hero">
-  <div class="page-hero-title">Оплата и доставка</div>
-  <div class="page-hero-sub">Всё что нужно знать о заказе</div>
+  <div class="page-hero-title">Вопросы и ответы</div>
+  <div class="page-hero-sub">Всё что вас интересует</div>
 </div>
 
-<div class="delivery-wrap">
+<div class="faq-wrap">
 
-  <!-- ОПЛАТА -->
-  <div class="delivery-block">
-    <h2>Оплата</h2>
-    <div class="payment-card">
-      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-      <div class="payment-card-text">
-        <h3>Банковская карта онлайн</h3>
-        <p>При оформлении заказа на сайте возможна только онлайн оплата банковской картой.</p>
-      </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">
+      <div class="faq-q-text">Сроки изготовления украшения</div>
+      <div class="faq-icon">+</div>
     </div>
-    <div class="notice">
-      <p>После подключения платёжной системы оплата будет доступна прямо на сайте. До этого момента для оформления заказа напишите нам в <a href="https://t.me/miaperlina" target="_blank" style="color:var(--ch-dark)">Telegram</a> или <a href="https://wa.me/79288482111" target="_blank" style="color:var(--ch-dark)">WhatsApp</a>.</p>
-    </div>
+    <div class="faq-a"><p><span class="coming-soon">Информация появится позже</span></p></div>
   </div>
 
-  <!-- ДОСТАВКА -->
-  <div class="delivery-block">
-    <h2>Доставка по России</h2>
-
-    <div class="delivery-item">
-      <div class="delivery-num">1</div>
-      <div class="delivery-info">
-        <h3>Курьер по г. Краснодару</h3>
-        <p>Доставка по Краснодару курьером по тарифам Яндекса.</p>
-      </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">
+      <div class="faq-q-text">Как ухаживать за изделиями?</div>
+      <div class="faq-icon">+</div>
     </div>
+    <div class="faq-a"><p><span class="coming-soon">Информация появится позже</span></p></div>
+  </div>
 
-    <div class="delivery-item">
-      <div class="delivery-num">2</div>
-      <div class="delivery-info">
-        <h3>СДЭК / Яндекс доставка — любой город</h3>
-        <p>Стоимость доставки — <strong style="color:var(--navy)">400 ₽</strong>. Доступно для любого города России.</p>
-      </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">
+      <div class="faq-q-text">Какой материал используется?</div>
+      <div class="faq-icon">+</div>
     </div>
+    <div class="faq-a"><p><span class="coming-soon">Информация появится позже</span></p></div>
+  </div>
 
-    <div class="notice">
-      <p>Сроки доставки зависят от выбранной транспортной компании и города назначения.</p>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">
+      <div class="faq-q-text">Как замерить шею / запястье?</div>
+      <div class="faq-icon">+</div>
     </div>
+    <div class="faq-a"><p><span class="coming-soon">Информация появится позже</span></p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">
+      <div class="faq-q-text">Что делать, если товар потерялся при доставке?</div>
+      <div class="faq-icon">+</div>
+    </div>
+    <div class="faq-a"><p><span class="coming-soon">Информация появится позже</span></p></div>
   </div>
 
 </div>
@@ -153,8 +151,8 @@
       <h4>Покупателям</h4>
       <ul>
         <li><a href="delivery.html">Оплата и доставка</a></li>
-        <li><a href="#">Возврат</a></li>
         <li><a href="faq.html">Вопросы и ответы</a></li>
+        <li><a href="#">Возврат</a></li>
         <li><a href="contact.html">Помощь</a></li>
       </ul>
     </div>
@@ -178,11 +176,10 @@
 
 <script src="js/cart.js"></script>
 <script>
-function copyPhone(el){
-  navigator.clipboard.writeText('+79288482111').then(function(){
-    var s=el.querySelector('.phone-text');var o=s.textContent;
-    s.textContent='Скопировано!';setTimeout(function(){s.textContent=o;},2000);
-  });
+function toggleFaq(el){
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if(!isOpen) el.classList.add('open');
 }
 function toggleMenu(){
   document.getElementById('burger').classList.toggle('open');
@@ -198,7 +195,7 @@ document.addEventListener('click',function(e){
   var wrap=document.getElementById('tickWrap');
   if(!wrap)return;
   wrap.innerHTML+=wrap.innerHTML;
-  var fullW=wrap.scrollWidth/2,speed=window.innerWidth<769?60:60,pos=0,last=null;
+  var fullW=wrap.scrollWidth/2,speed=60,pos=0,last=null;
   function step(ts){if(last)pos+=(ts-last)/1000*speed;last=ts;if(pos>=fullW)pos-=fullW;wrap.style.transform='translateX(-'+pos+'px)';requestAnimationFrame(step);}
   requestAnimationFrame(step);
 })();
